@@ -12,9 +12,10 @@ ec2 = boto3.client('ec2')
 @click.option('-t','--instance_type', help='Takes t2.small or t3.micro')
 @click.option('-n', '--name', default='', help="Name of object")
 def create(obj, instance_type, name):
-    if obj == 's3':
-        s3.create_bucket(Bucket=name)
-        click.echo(f"obj: {obj} name: {name} created successfully")
+    match obj:
+        case 's3':
+            s3.create_bucket(Bucket=name)
+            click.echo(f"obj: {obj} name: {name} created successfully")
     pass
 
 @click.command()
@@ -48,3 +49,4 @@ def number():
     click.echo(random.randint(1, 10))
 
     pass
+
