@@ -8,7 +8,7 @@ readme = "README.md"
 [tool.poetry.dependencies]
 click = ">=8.1.7"
 boto3 = ">=1.40"
-python = ">=3.9"
+python = ">=3.12"
 
 
 [build-system]
@@ -18,4 +18,5 @@ build-backend = "poetry.core.masonry.api"
 [tool.poetry.scripts]
 
 awscli = "awscli:cli"
+
 
