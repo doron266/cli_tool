@@ -10,7 +10,10 @@ cli.add_command(crud.create)
 
 cli.add_command(crud.list_objects)
 
+cli.add_command(crud.number)
+
 
 if __name__ == '__main__':
     cli()
+
 
